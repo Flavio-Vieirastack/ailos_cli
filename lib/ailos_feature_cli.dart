@@ -8,6 +8,7 @@ void main(List<String> args) async {
   final entityAndModelNames = <String>{};
   final currentDir = Directory.current;
   final finalDir = '${currentDir.path}/lib/src/features';
+  print('Duretorio atual: $currentDir');
   //final finalDir = '${currentDir.path}/scr/features'; //! Descomentar para teste
   print('🚀 Type your feature name 🚀');
   final featureNameRaw = stdin.readLineSync();
