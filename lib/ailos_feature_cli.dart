@@ -42,31 +42,106 @@ void main(List<String> args) async {
 
   final mkdir = Platform.isMacOS ? 'mkdir -p' : 'mkdir';
   wrapMain(() async {
-    await run("$mkdir $finalDir/$featureName");
-    await run("$mkdir $testDir/$featureName");
-    await run("$mkdir $finalDir/$featureName/data");
-    await run("$mkdir $testDir/$featureName/data");
-    await run("$mkdir $finalDir/$featureName/data/datasource");
-    await run("$mkdir $testDir/$featureName/data/datasource");
-    await run("$mkdir $finalDir/$featureName/data/repository");
-    await run("$mkdir $testDir/$featureName/data/repository");
-    await run("$mkdir $finalDir/$featureName/data/model");
-    await run("$mkdir $testDir/$featureName/data/model");
-    await run("$mkdir $finalDir/$featureName/domain");
-    await run("$mkdir $testDir/$featureName/domain");
-    await run("$mkdir $finalDir/$featureName/domain/usecase");
-    await run("$mkdir $testDir/$featureName/domain/usecase");
-    await run("$mkdir $finalDir/$featureName/domain/repository");
-    await run("$mkdir $testDir/$featureName/domain/entity");
-    await run("$mkdir $testDir/$featureName/domain/errors");
-    await run("$mkdir $finalDir/$featureName/domain/errors");
-    await run("$mkdir $testDir/$featureName/presenter/pages");
-    await run("$mkdir $testDir/$featureName/presenter/widget");
-    await run("$mkdir $testDir/$featureName/presenter/cubit");
-    await run("$mkdir $finalDir/$featureName/presenter/pages");
-    await run("$mkdir $finalDir/$featureName/presenter/widgets");
-    await run("$mkdir $finalDir/$featureName/presenter/cubits");
-    await run("$mkdir $finalDir/$featureName/domain/entity").then((_) {
+    await run(
+      "$mkdir $finalDir/$featureName",
+      runInShell: true,
+    );
+    await run(
+      "$mkdir $testDir/$featureName",
+      runInShell: true,
+    );
+    await run(
+      "$mkdir $finalDir/$featureName/data",
+      runInShell: true,
+    );
+    await run(
+      "$mkdir $testDir/$featureName/data",
+      runInShell: true,
+    );
+    await run(
+      "$mkdir $finalDir/$featureName/data/datasource",
+      runInShell: true,
+    );
+    await run(
+      "$mkdir $testDir/$featureName/data/datasource",
+      runInShell: true,
+    );
+    await run(
+      "$mkdir $finalDir/$featureName/data/repository",
+      runInShell: true,
+    );
+    await run(
+      "$mkdir $testDir/$featureName/data/repository",
+      runInShell: true,
+    );
+    await run(
+      "$mkdir $finalDir/$featureName/data/model",
+      runInShell: true,
+    );
+    await run(
+      "$mkdir $testDir/$featureName/data/model",
+      runInShell: true,
+    );
+    await run(
+      "$mkdir $finalDir/$featureName/domain",
+      runInShell: true,
+    );
+    await run(
+      "$mkdir $testDir/$featureName/domain",
+      runInShell: true,
+    );
+    await run(
+      "$mkdir $finalDir/$featureName/domain/usecase",
+      runInShell: true,
+    );
+    await run(
+      "$mkdir $testDir/$featureName/domain/usecase",
+      runInShell: true,
+    );
+    await run(
+      "$mkdir $finalDir/$featureName/domain/repository",
+      runInShell: true,
+    );
+    await run(
+      "$mkdir $testDir/$featureName/domain/entity",
+      runInShell: true,
+    );
+    await run(
+      "$mkdir $testDir/$featureName/domain/errors",
+      runInShell: true,
+    );
+    await run(
+      "$mkdir $finalDir/$featureName/domain/errors",
+      runInShell: true,
+    );
+    await run(
+      "$mkdir $testDir/$featureName/presenter/pages",
+      runInShell: true,
+    );
+    await run(
+      "$mkdir $testDir/$featureName/presenter/widget",
+      runInShell: true,
+    );
+    await run(
+      "$mkdir $testDir/$featureName/presenter/cubit",
+      runInShell: true,
+    );
+    await run(
+      "$mkdir $finalDir/$featureName/presenter/pages",
+      runInShell: true,
+    );
+    await run(
+      "$mkdir $finalDir/$featureName/presenter/widgets",
+      runInShell: true,
+    );
+    await run(
+      "$mkdir $finalDir/$featureName/presenter/cubits",
+      runInShell: true,
+    );
+    await run(
+      "$mkdir $finalDir/$featureName/domain/entity",
+      runInShell: true,
+    ).then((_) {
       writeFile(
         data: entityAndModelNames,
         path: pathToEntity,
