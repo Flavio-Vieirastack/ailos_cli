@@ -7,8 +7,8 @@ import 'package:cli_script/cli_script.dart';
 void main(List<String> args) async {
   final entityAndModelNames = <String>{};
   final currentDir = Directory.current;
-  //final finalDir = '${currentDir.path}/lib/src/features'; // TODO descomentar
-  final finalDir = '${currentDir.path}/scr/features';
+  final finalDir = '${currentDir.path}/lib/src/features';
+  //final finalDir = '${currentDir.path}/scr/features'; //! Descomentar para teste
   print('🚀 Type your feature name 🚀');
   final featureNameRaw = stdin.readLineSync();
   final featureName =
