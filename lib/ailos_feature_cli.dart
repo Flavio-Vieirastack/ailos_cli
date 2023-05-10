@@ -1,5 +1,5 @@
 import 'dart:io';
-
+import 'package:path/path.dart' as p;
 import 'package:ailos_feature_cli/helpers/whrite_file.dart';
 import 'package:basic_utils/basic_utils.dart';
 import 'package:cli_script/cli_script.dart';
@@ -7,8 +7,13 @@ import 'package:cli_script/cli_script.dart';
 void main(List<String> args) async {
   final entityAndModelNames = <String>{};
   final currentDir = Directory.current;
-  final finalDir = '${currentDir.path}/lib/src/features';
-  print('Duretorio atual: $currentDir');
+  //final finalDir = '${currentDir.path}/lib/src/features';
+  final finalDir = p.join(
+    currentDir.path,
+    'lib',
+    'src',
+    'features',
+  );
   //final finalDir = '${currentDir.path}/scr/features'; //! Descomentar para teste
   print('🚀 Type your feature name 🚀');
   final featureNameRaw = stdin.readLineSync();
